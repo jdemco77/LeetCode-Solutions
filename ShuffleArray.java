@@ -20,4 +20,17 @@ public class ShuffleArray {
         }
         return ret;
     }
+	public int[] shuffleFaster(int[] nums, int n) {
+        int[] ret=new int[nums.length];
+        int i=0;
+        
+        for(int j=0;j<nums.length;j+=2){
+            ret[j]=nums[i];
+            i++;
+            ret[j+1]=nums[n];
+            n++;
+            
+        }
+        return ret;
+    }
 }
